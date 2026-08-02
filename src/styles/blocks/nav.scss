@@ -22,6 +22,20 @@
     text-transform: uppercase;
     font-size: 12px;
     transition: color $transition-time linear;
+  &--active {
+    position: relative;
+    color: $nav-text-color;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      background-color: $buy-color;
+      border-radius: 8px;
+    }
+  }
+
     &:hover {
       color: $nav-text-color;
     }
